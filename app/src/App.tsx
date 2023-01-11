@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className='App bg-bgWhite h-screen relative w-full font-[Lato] text-accentBlack'>
-      <div className='relative top-1/4 -translate-y-1/4'>
+      <div className='relative top-1/5'>
         <p className='font-medium animate-moveTextDown text-2xl lg:text-5xl '>
           Lode Van Beneden
         </p>

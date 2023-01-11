@@ -33,7 +33,11 @@ module.exports = {
       },
       width: {
         '1/8': "12.5%"
+      },
+      inset: {
+          '1/5': "20%"
       }
+
     },
   },
   plugins: [],
