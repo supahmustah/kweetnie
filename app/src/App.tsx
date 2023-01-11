@@ -5,13 +5,13 @@ function App() {
   return (
     <div className='App bg-bgWhite h-screen relative w-full font-[Lato] text-accentBlack'>
       <div className='relative top-1/4 -translate-y-1/4'>
-        <p className='text-5xl font-medium animate-moveTextDown'>
+        <p className='font-medium animate-moveTextDown text-2xl lg:text-5xl '>
           Lode Van Beneden
         </p>
         <div
-          className={`bg-accentBlack w-1/8 p-[1.5px] my-5 relative animate-expandLine left-1/2 -translate-x-1/2 opacity-0`}
+          className={`bg-accentBlack relative animate-expandLine left-1/2 -translate-x-1/2 opacity-0 my-3 p-[1.5px] lg:my-5 `}
           id='movingLine'></div>
-        <p className={`text-3xl animate-moveTextUp opacity-0`}>
+        <p className={`animate-moveTextUp mx-2 opacity-0 text-lg lg:text-2xl `}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>
