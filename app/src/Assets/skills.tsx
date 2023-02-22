@@ -1,5 +1,7 @@
 import * as SimpleIcons from 'react-icons/si';
 import * as Devicons from 'react-icons/di';
+import { TbCSharp, TbBrandCss3, TbBrandHtml5 } from 'react-icons/tb';
+import { GrMysql } from 'react-icons/gr';
 const skills = [
   {
     title: 'JavaScript',
@@ -10,7 +12,7 @@ const skills = [
   },
   {
     title: 'CSharp',
-    icon: <SimpleIcons.SiCsharp />,
+    icon: <TbCSharp />,
     color: '#6A1577',
     appreciation: 4,
     desc: `C# is a general-purpose, multi-paradigm progamming language. It encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented and component-oriented programming disciplines. This is the first backend language I've learnt. I used this mostly in my school days since then I have not used it that much, but I'm always prepared to expand my knowledge of it.`,
@@ -31,21 +33,21 @@ const skills = [
   },
   {
     title: 'MySQL',
-    icon: <SimpleIcons.SiMysql />,
+    icon: <GrMysql />,
     color: '#00618B',
     appreciation: 4,
     desc: `MySQL is an open-source relational database management system. It's a langauge programmers use to create, modify and extract data from relational databases. This is the first relational database that I've learnt. I like doing database related stuff such as setting up difficult queries, using stored procedures etc. I found MySQL always a flattering language.`,
   },
   {
     title: 'HTML',
-    icon: <SimpleIcons.SiHtml5 />,
+    icon: <TbBrandHtml5 />,
     color: '#E54C21',
     appreciation: 4,
     desc: `The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It's usually combined with CSS and/or JavaScript for nicer looking websites. This is the first language I've learnt and I'm using it for pretty much every project. I enjoy making websites, I primarily make it in ReactJS but ofcourse there is some HTML mixed in to that.`,
   },
   {
     title: 'CSS',
-    icon: <SimpleIcons.SiCss3 />,
+    icon: <TbBrandCss3 />,
     color: '#244ADD',
     appreciation: 3.5,
     desc: `Cascading Style Sheets or CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. It's a cornerstone technology of the making websites alongside HTML and JavaScript. I mostly use CSS for the parts I can't do when I'm using a framework like Tailwind. The way CSS works is very simple and easy to learn so I liked it when I first started to learn it.`,

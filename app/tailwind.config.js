@@ -42,6 +42,10 @@ module.exports = {
           "100%": {
             boxShadow: "0 0 0 20px rgba(0, 0, 0, 0)"
           }
+        },
+        rotateLogo: {
+          '0%':{transform:'rotateY(0deg)'},
+          '100%':{transform:'rotateY(360deg)'}
         }
       },
       animation: {
@@ -49,7 +53,8 @@ module.exports = {
         moveTextDown: 'moveTextDown 0.65s ease-out forwards',
         moveTextUp: 'moveTextUp 0.65s ease-out 0.65s forwards',
         showSocial: 'showSocial 0.5s ease-out 1.3s forwards',
-        showPulse: 'showPulse 1.5s 1.6s infinite;' 
+        showPulse: 'showPulse 1.5s 1.6s infinite',
+        rotateLogo: 'rotateLogo 0.5s linear'
       },
       width: {
         '1/8': "12.5%"
