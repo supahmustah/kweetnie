@@ -9,8 +9,14 @@ module.exports = {
     },
     extend: {
       colors: {
-        bgWhite: '#f8f8ff',
+        bgWhite: '#f5f5ff',
         accentBlack: '#242423'
+      },
+      margin: {
+        '1/8': '12.5%'
+      },
+      padding:{
+        '1/8': '12.5%'
       },
       keyframes: {
         expandLine: {
@@ -28,13 +34,22 @@ module.exports = {
         showSocial: {
           '0%': {transform: 'scale(0.8)',opacity:0},
           '100%': { transform: 'scale(1)', opacity:1}
+        },
+        showPulse :{
+          "0%": {
+            boxShadow: "0 0 0 0px rgba(0, 0, 0, 0.2)"
+          },
+          "100%": {
+            boxShadow: "0 0 0 20px rgba(0, 0, 0, 0)"
+          }
         }
       },
       animation: {
         expandLine: 'expandLine 0.65s ease-out 1.3s forwards',
         moveTextDown: 'moveTextDown 0.65s ease-out forwards',
         moveTextUp: 'moveTextUp 0.65s ease-out 0.65s forwards',
-        showSocial: 'showSocial 0.5s ease-out 1.3s forwards'
+        showSocial: 'showSocial 0.5s ease-out 1.3s forwards',
+        showPulse: 'showPulse 1.5s 1.6s infinite;' 
       },
       width: {
         '1/8': "12.5%"
