@@ -109,7 +109,13 @@
   animation-duration: 11s;
 }
 
-
+.swiper-pagination-bullet{
+  background-color: #4e54c8;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4e54c8;
+}
 
 @keyframes animate {
 

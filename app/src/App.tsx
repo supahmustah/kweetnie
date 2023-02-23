@@ -1,11 +1,23 @@
-import React, { createElement } from 'react';
+import React, { createElement, useState } from 'react';
 import './App.css';
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import skills from './Assets/skills';
+import HeartContainer from './Components/HeartContainer';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation, EffectFade } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 function App() {
+  const [pageAmount, setPageAmount] = useState(skills.length / 4);
+
+  const moveNext = () => {};
+  const movePrevious = () => {};
+
   return (
-    <div className='App w-full font-[Lato] text-accentBlack'>
+    <div className='App w-full font-[Lato] text-accentBlack bg-bgWhite'>
       <div className='area'>
         <ul className='circles'>
           <li></li>
@@ -68,34 +80,55 @@ function App() {
             className='shape-fill'></path>
         </svg>
       </div>
-      <div className='w-full bg-bgWhite flex items-center justify-center'>
-        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4'>
-          {skills.map((skill) => (
-            <div className='relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl'>
-              <div className=' text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-pink-500 left-4 -top-6'>
-                {createElement(skill.icon.type, {
-                  className: `w-8 h-8`,
-                })}
-              </div>
-              <div className='mt-8'>
-                <p className='text-xl font-semibold my-2'>{skill.title}</p>
-                <div className='flex space-x-2 text-gray-400 text-sm'>
-                  Lorem Ipsum is simply dummy text of the printing and
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        {/* <div className='w-1/2 grid grid-rows-3 gap-10 grid-cols-3'>
+      <div className='bg-bgWhite flex align-middle'>
+        <Swiper
+          className='overflow-hidden w-1/2'
+          slidesPerView={3}
+          modules={[Navigation, Pagination]}
+          centerInsufficientSlides={true}
+          spaceBetween={50}
+          centeredSlides={true}
+          loop={true}
+          grabCursor={true}
+          breakpoints={{
+            0: {
+              slidesPerView: 4,
+            },
+            520: {
+              slidesPerView: 4,
+            },
+            950: {
+              slidesPerView: 4,
+            },
+          }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          pagination={{
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+            enabled: true,
+          }}>
           {skills.map((skill, index) => (
-            <div className={`p-5`}>
-              {createElement(skill.icon.type, {
-                className: `w-20 h-20`,
-              })}
-              <p className={`text-[${skill.color}]`}>{skill.color}</p>
-            </div>
+            <SwiperSlide>
+              <div className='relative bg-white py-6 px-6 rounded-3xl w-64 my-9 shadow-xl'>
+                <div
+                  className={` text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl ${skill.color} left-4 -top-6`}>
+                  {createElement(skill.icon.type, {
+                    className: `w-8 h-8`,
+                  })}
+                </div>
+                <div className='mt-8'>
+                  <p className='text-xl font-semibold my-2'>{skill.title}</p>
+                  <HeartContainer enjoyment={skill.appreciation} />
+                </div>
+                <div className='border-t-2'></div>
+              </div>
+            </SwiperSlide>
           ))}
-        </div> */}
+        </Swiper>
       </div>
     </div>
   );
