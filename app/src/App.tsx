@@ -2,13 +2,11 @@ import React, { createElement, useState } from 'react';
 import './App.css';
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import skills from './Assets/skills';
-import HeartContainer from './Components/HeartContainer';
+import StarContainer from './Components/StarContainer';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, EffectFade } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
 
 function App() {
   const [pageAmount, setPageAmount] = useState(skills.length / 4);
@@ -40,27 +38,19 @@ function App() {
           <div
             className={`bg-white relative animate-expandLine left-1/2 -translate-x-1/2 opacity-0 my-3 p-[1.5px] lg:my-5 `}
             id='movingLine'></div>
-          <p
-            className={`animate-moveTextUp mx-2 opacity-0 text-lg lg:text-2xl`}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+          <p className={`animate-moveTextUp mx-2 opacity-0 text-lg lg:text-2xl`}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
         </div>
         <div className={`flex gap-4 justify-center`}>
           <span className='bg-white p-5 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#0A66C2] hover:text-white animate-showSocial group'>
-            <FaLinkedinIn
-              className={`w-10 h-10 group-hover:animate-rotateLogo`}
-            />
+            <FaLinkedinIn className={`w-10 h-10 group-hover:animate-rotateLogo`} />
           </span>
           <span className='bg-white p-5 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#EA3B52] hover:text-white animate-showSocial group'>
-            <FaInstagram
-              className={`w-10 h-10 group-hover:animate-rotateLogo`}
-            />
+            <FaInstagram className={`w-10 h-10 group-hover:animate-rotateLogo`} />
           </span>
           <span className='bg-white p-5 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#1479BD] hover:text-white animate-showSocial group'>
-            <FaFacebookF
-              className={`w-10 h-10 group-hover:animate-rotateLogo`}
-            />
+            <FaFacebookF className={`w-10 h-10 group-hover:animate-rotateLogo`} />
           </span>
         </div>
         <div className='flex justify-center animate-showSocial opacity-0 transition-all duration-500 cursor-pointer'>
@@ -80,40 +70,24 @@ function App() {
             className='shape-fill'></path>
         </svg>
       </div>
-      <div className='bg-bgWhite flex align-middle'>
+      <div className='slide-container bg-bgWhite relative max-w-[1300px] w-full m-auto'>
         <Swiper
-          className='overflow-hidden w-1/2'
-          slidesPerView={3}
-          modules={[Navigation, Pagination]}
-          centerInsufficientSlides={true}
-          spaceBetween={50}
-          centeredSlides={true}
+          spaceBetween={10}
+          slidesPerView={5}
+          speed={500}
+          direction={'horizontal'}
           loop={true}
-          grabCursor={true}
-          breakpoints={{
-            0: {
-              slidesPerView: 4,
-            },
-            520: {
-              slidesPerView: 4,
-            },
-            950: {
-              slidesPerView: 4,
-            },
-          }}
+          centeredSlides={true}
+          loopedSlides={5}
+          roundLengths={true}
+          modules={[Navigation]}
           navigation={{
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-          }}
-          pagination={{
-            el: '.swiper-pagination',
-            clickable: true,
-            dynamicBullets: true,
-            enabled: true,
           }}>
           {skills.map((skill, index) => (
-            <SwiperSlide>
-              <div className='relative bg-white py-6 px-6 rounded-3xl w-64 my-9 shadow-xl'>
+            <SwiperSlide className='flex justify-center align-center '>
+              <div className='relative bg-white py-6 px-6 rounded-3xl w-56 my-9 shadow-xl'>
                 <div
                   className={` text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl ${skill.color} left-4 -top-6`}>
                   {createElement(skill.icon.type, {
@@ -122,13 +96,18 @@ function App() {
                 </div>
                 <div className='mt-8'>
                   <p className='text-xl font-semibold my-2'>{skill.title}</p>
-                  <HeartContainer enjoyment={skill.appreciation} />
+                  <StarContainer enjoyment={skill.appreciation} />
                 </div>
                 <div className='border-t-2'></div>
+                <div className='font-semibold italic mt-3'>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className='swiper-button-prev left-0'></div>
+        <div className='swiper-button-next right-0'></div>
       </div>
     </div>
   );
