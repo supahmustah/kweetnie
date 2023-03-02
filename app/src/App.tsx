@@ -134,8 +134,8 @@ function App() {
         </div>
         <div className='mt-32'>
           <h1 className='font-semibold text-2xl lg:text-5xl'>Projects</h1>
-          <div className='grid grid-cols-3 grid-rows-3 pt-6 w-[55%] m-auto gap-10 place-content-center justify-items-center'>
-            <div className='bg-red-500 h-80 w-80 hover:h-[22rem] hover:w-[22rem] transition-all shadow-2xl peer'>
+          <div className='grid grid-cols-3 grid-rows-3 pt-6 w-[55%] m-auto gap-10 place-content-center place-items-center'>
+            <div className='bg-red-500 h-80 w-80 transition-all shadow-2xl peer'>
               &nbsp;
             </div>
             <div className='bg-blue-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
@@ -150,7 +150,7 @@ function App() {
             <div className='bg-orange-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
               &nbsp;
             </div>
-            <div className='bg-pink-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
+            <div className='bg-pink-500 h-80 w-80  hover:h-[22rem] hover:w-[22rem] peer-hover:opacity-70 transition-all'>
               &nbsp;
             </div>
             <div className='bg-lime-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
