@@ -101,7 +101,7 @@ function App() {
             dynamicBullets: true,
           }}>
           {skills.map((skill, index) => (
-            <SwiperSlide className='flex justify-center align-center '>
+            <SwiperSlide className='flex justify-center align-center h-screen'>
               <div className='relative bg-white py-6 px-6 rounded-3xl w-56 my-9 shadow-xl'>
                 <div
                   className={` text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl ${skill.color} left-4 -top-6`}>
