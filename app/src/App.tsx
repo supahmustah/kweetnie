@@ -10,11 +10,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 function App() {
-  const [pageAmount, setPageAmount] = useState(skills.length / 4);
-
-  const moveNext = () => {};
-  const movePrevious = () => {};
-
   return (
     <div className='App w-full font-[Lato] text-accentBlack bg-bgWhite'>
       <div className='area'>
@@ -124,6 +119,51 @@ function App() {
         <div className='swiper-button-prev swiper-navBtn'></div>
         <div className='swiper-button-next swiper-navBtn'></div>
         <div className='swiper-pagination'></div>
+      </div>
+      <div className='bg-white pt-6 relative flex flex-col'>
+        <div className='custom-shape-divider-top-1677783687'>
+          <svg
+            data-name='Layer 1'
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 1200 120'
+            preserveAspectRatio='none'>
+            <path
+              d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z'
+              className='shape-fill'></path>
+          </svg>
+        </div>
+        <div className='mt-32'>
+          <h1 className='font-semibold text-2xl lg:text-5xl'>Projects</h1>
+          <div className='grid grid-cols-3 grid-rows-3 pt-6 w-[55%] m-auto gap-10 place-content-center justify-items-center'>
+            <div className='bg-red-500 h-80 w-80 hover:h-[22rem] hover:w-[22rem] transition-all shadow-2xl peer'>
+              &nbsp;
+            </div>
+            <div className='bg-blue-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
+              &nbsp;
+            </div>
+            <div className='bg-green-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
+              &nbsp;
+            </div>
+            <div className='bg-yellow-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
+              &nbsp;
+            </div>
+            <div className='bg-orange-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
+              &nbsp;
+            </div>
+            <div className='bg-pink-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
+              &nbsp;
+            </div>
+            <div className='bg-lime-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
+              &nbsp;
+            </div>
+            <div className='bg-cyan-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
+              &nbsp;
+            </div>
+            <div className='bg-purple-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
+              &nbsp;
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
