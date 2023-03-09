@@ -136,13 +136,15 @@ function App() {
         </div>
         <div className='mt-32'>
           <h1 className='font-semibold text-2xl lg:text-5xl'>Projects</h1>
-          <div className='grid grid-cols-3 grid-rows-3 pt-6 w-[55%] m-auto gap-10 place-content-center place-items-center'>
+          <div className='grid grid-cols-3 grid-rows-3 pt-6 w-[55%] m-auto gap-10 place-content-center place-items-center relative'>
             <div
-              className={`bg-red-500 h-72 w-72 transition-all ${projClicked ? `z-20` : `z-0`}`}
+              className={`bg-red-500 h-72 w-72 transition-all ${
+                projClicked ? `sticky z-20  scale-200` : `z-0`
+              }`}
               onClick={(e) => showProject(e)}>
               &nbsp;
             </div>
-            <div className='bg-blue-500 h-72 w-72 transition-all'>&nbsp;</div>
+            <div className={`bg-blue-500 h-72 w-72 transition-all`}>&nbsp;</div>
             <div className='bg-green-500 h-72 w-72 transition-all'>&nbsp;</div>
             <div className='bg-yellow-500 h-72 w-72 transition-all'>&nbsp;</div>
             <div className='bg-orange-500 h-72 w-72 transition-all'>&nbsp;</div>

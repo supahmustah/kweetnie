@@ -12,6 +12,9 @@ module.exports = {
         bgWhite: '#f5f5ff',
         accentBlack: '#242423'
       },
+      scale: {
+        '200': '2.0'
+      },
       margin: {
         '1/8': '12.5%'
       },
