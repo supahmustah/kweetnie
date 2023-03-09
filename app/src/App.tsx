@@ -10,8 +10,18 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 function App() {
+  const [projClicked, setProjClicked] = useState(false);
+
+  const showProject = (project: any) => {
+    setProjClicked(!projClicked);
+  };
+
   return (
     <div className='App w-full font-[Lato] text-accentBlack bg-bgWhite'>
+      <div
+        className={`bg-stone-900 opacity-50 w-full h-screen fixed transition-all ${
+          projClicked ? `opacity-50 z-10` : `opacity-0 z-0`
+        }`}></div>
       <div className='area'>
         <ul className='circles'>
           <li></li>
@@ -34,27 +44,19 @@ function App() {
           <div
             className={`bg-white relative animate-expandLine left-1/2 -translate-x-1/2 opacity-0 my-3 p-[1.5px] lg:my-5 `}
             id='movingLine'></div>
-          <p
-            className={`animate-moveTextUp mx-2 opacity-0 text-lg lg:text-2xl`}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+          <p className={`animate-moveTextUp mx-2 opacity-0 text-lg lg:text-2xl`}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
         </div>
         <div className={`flex gap-4 justify-center`}>
           <span className='bg-white p-5 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#0A66C2] hover:text-white animate-showSocial group'>
-            <FaLinkedinIn
-              className={`w-10 h-10 group-hover:animate-rotateLogo`}
-            />
+            <FaLinkedinIn className={`w-10 h-10 group-hover:animate-rotateLogo`} />
           </span>
           <span className='bg-white p-5 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#EA3B52] hover:text-white animate-showSocial group'>
-            <FaInstagram
-              className={`w-10 h-10 group-hover:animate-rotateLogo`}
-            />
+            <FaInstagram className={`w-10 h-10 group-hover:animate-rotateLogo`} />
           </span>
           <span className='bg-white p-5 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#1479BD] hover:text-white animate-showSocial group'>
-            <FaFacebookF
-              className={`w-10 h-10 group-hover:animate-rotateLogo`}
-            />
+            <FaFacebookF className={`w-10 h-10 group-hover:animate-rotateLogo`} />
           </span>
         </div>
         <div className='flex justify-center animate-showSocial opacity-0 transition-all duration-500 cursor-pointer'>
@@ -135,33 +137,19 @@ function App() {
         <div className='mt-32'>
           <h1 className='font-semibold text-2xl lg:text-5xl'>Projects</h1>
           <div className='grid grid-cols-3 grid-rows-3 pt-6 w-[55%] m-auto gap-10 place-content-center place-items-center'>
-            <div className='bg-red-500 h-80 w-80 transition-all shadow-2xl peer'>
+            <div
+              className={`bg-red-500 h-72 w-72 transition-all ${projClicked ? `z-20` : `z-0`}`}
+              onClick={(e) => showProject(e)}>
               &nbsp;
             </div>
-            <div className='bg-blue-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
-              &nbsp;
-            </div>
-            <div className='bg-green-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
-              &nbsp;
-            </div>
-            <div className='bg-yellow-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
-              &nbsp;
-            </div>
-            <div className='bg-orange-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
-              &nbsp;
-            </div>
-            <div className='bg-pink-500 h-80 w-80  hover:h-[22rem] hover:w-[22rem] peer-hover:opacity-70 transition-all'>
-              &nbsp;
-            </div>
-            <div className='bg-lime-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
-              &nbsp;
-            </div>
-            <div className='bg-cyan-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
-              &nbsp;
-            </div>
-            <div className='bg-purple-500 h-80 w-80 peer-hover:opacity-70 transition-all'>
-              &nbsp;
-            </div>
+            <div className='bg-blue-500 h-72 w-72 transition-all'>&nbsp;</div>
+            <div className='bg-green-500 h-72 w-72 transition-all'>&nbsp;</div>
+            <div className='bg-yellow-500 h-72 w-72 transition-all'>&nbsp;</div>
+            <div className='bg-orange-500 h-72 w-72 transition-all'>&nbsp;</div>
+            <div className='bg-pink-500 h-72 w-72 transition-all'>&nbsp;</div>
+            <div className='bg-lime-500 h-72 w-72 transition-all'>&nbsp;</div>
+            <div className='bg-cyan-500 h-72 w-72 transition-all'>&nbsp;</div>
+            <div className='bg-purple-500 h-72 w-72 transition-all'>&nbsp;</div>
           </div>
         </div>
       </div>
