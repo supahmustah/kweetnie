@@ -23,8 +23,8 @@ export default function StarContainer(props: any) {
 
   return (
     <div className='flex flex-row justify-center space-x-[1px] mb-2 text-gray-400 text-sm'>
-      {stars.map((star) => (
-        <div>{createElement(star, { className: 'h-4 w-4 text-yellow-500' })}</div>
+      {stars.map((star, index) => (
+        <div key={index}>{createElement(star, { className: 'h-4 w-4 text-yellow-500' })}</div>
       ))}
     </div>
   );

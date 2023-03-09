@@ -10,18 +10,22 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 function App() {
-  const [projClicked, setProjClicked] = useState(false);
+  const [projectsClicked, setProjectsClicked] = useState(new Array<Boolean>(9).fill(false));
 
-  const showProject = (project: any) => {
-    setProjClicked(!projClicked);
+  const showProject = (projectNumber: number) => {
+    const currentStateClicked = projectsClicked;
+    currentStateClicked.fill(false);
+    if (currentStateClicked[projectNumber]) currentStateClicked[projectNumber] = false;
+    else currentStateClicked[projectNumber] = true;
+    setProjectsClicked(currentStateClicked);
   };
 
   return (
     <div className='App w-full font-[Lato] text-accentBlack bg-bgWhite'>
-      <div
+      {/* <div
         className={`bg-stone-900 opacity-50 w-full h-screen fixed transition-all ${
-          projClicked ? `opacity-50 z-10` : `opacity-0 z-0`
-        }`}></div>
+          projectsClicked ? `opacity-50 z-10` : `opacity-0 z-0`
+        }`}></div> */}
       <div className='area'>
         <ul className='circles'>
           <li></li>
@@ -98,7 +102,7 @@ function App() {
             dynamicBullets: true,
           }}>
           {skills.map((skill, index) => (
-            <SwiperSlide className='flex justify-center align-center h-screen'>
+            <SwiperSlide key={index} className='flex justify-center align-center h-screen'>
               <div className='relative bg-white py-6 px-6 rounded-3xl w-56 my-9 shadow-xl'>
                 <div
                   className={` text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl ${skill.color} left-4 -top-6`}>
@@ -137,21 +141,17 @@ function App() {
         <div className='mt-32'>
           <h1 className='font-semibold text-2xl lg:text-5xl'>Projects</h1>
           <div className='grid grid-cols-3 grid-rows-3 pt-6 w-[55%] m-auto gap-10 place-content-center place-items-center relative'>
-            <div
-              className={`bg-red-500 h-72 w-72 transition-all ${
-                projClicked ? `sticky z-20  scale-200` : `z-0`
-              }`}
-              onClick={(e) => showProject(e)}>
-              &nbsp;
-            </div>
-            <div className={`bg-blue-500 h-72 w-72 transition-all`}>&nbsp;</div>
-            <div className='bg-green-500 h-72 w-72 transition-all'>&nbsp;</div>
-            <div className='bg-yellow-500 h-72 w-72 transition-all'>&nbsp;</div>
-            <div className='bg-orange-500 h-72 w-72 transition-all'>&nbsp;</div>
-            <div className='bg-pink-500 h-72 w-72 transition-all'>&nbsp;</div>
-            <div className='bg-lime-500 h-72 w-72 transition-all'>&nbsp;</div>
-            <div className='bg-cyan-500 h-72 w-72 transition-all'>&nbsp;</div>
-            <div className='bg-purple-500 h-72 w-72 transition-all'>&nbsp;</div>
+            {projectsClicked.map((project, index) => (
+              <div
+                key={index}
+                id={`project-${index}`}
+                className={`bg-red-500 h-72 w-72 transition-all ${
+                  projectsClicked[index] ? `scale-200 z-20` : `scale-50`
+                }`}
+                onClick={() => showProject(index)}>
+                &nbsp;
+              </div>
+            ))}
           </div>
         </div>
       </div>
