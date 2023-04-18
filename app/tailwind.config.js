@@ -13,6 +13,9 @@ module.exports = {
         accentBlack: '#242423',
         textAccent: '#4e54c8'
       },
+      scale: {
+        '200': '2.0'
+      },
       margin: {
         '1/8': '12.5%'
       },
