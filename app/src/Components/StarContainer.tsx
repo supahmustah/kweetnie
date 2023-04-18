@@ -27,8 +27,6 @@ export default function StarContainer(props: any) {
         <div key={index}>
           {createElement(star, { className: 'h-4 w-4 text-yellow-500' })}
         </div>
-      {stars.map((star, index) => (
-        <div key={index}>{createElement(star, { className: 'h-4 w-4 text-yellow-500' })}</div>
       ))}
     </div>
   );
