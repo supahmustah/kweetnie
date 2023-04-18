@@ -10,7 +10,8 @@ module.exports = {
     extend: {
       colors: {
         bgWhite: '#f5f5ff',
-        accentBlack: '#242423'
+        accentBlack: '#242423',
+        textAccent: '#4e54c8'
       },
       margin: {
         '1/8': '12.5%'
