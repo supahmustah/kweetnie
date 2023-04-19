@@ -27,6 +27,10 @@ module.exports = {
           '0%': { width: '0%', opacity: 1},
           '100%': { width: '12.5%', opacity: 1}
         },
+        expandLineSmall: {
+          '0%': { width: '0%', opacity: 1},
+          '100%': { width: '25%', opacity: 1}
+        },
         moveTextDown: {
           '0%': { transform: 'translateY(-75px)', opacity: 0},
           '100%': { transform: 'translateY(0px)', opacity: 1}
@@ -54,6 +58,7 @@ module.exports = {
       },
       animation: {
         expandLine: 'expandLine 0.65s ease-out 1.3s forwards',
+        expandLineSmall: 'expandLineSmall 0.65s ease-out 1.3s forwards',
         moveTextDown: 'moveTextDown 0.65s ease-out forwards',
         moveTextUp: 'moveTextUp 0.65s ease-out 0.65s forwards',
         showSocial: 'showSocial 0.5s ease-out 1.3s forwards',
@@ -61,7 +66,12 @@ module.exports = {
         rotateLogo: 'rotateLogo 0.5s linear'
       },
       width: {
-        '1/8': "12.5%"
+        '1/8': "12.5%",
+      },
+      spacing: {
+        '1/8': "12.5%",
+        '1/2': "50%",
+        '2/3': "66%"
       },
       inset: {
           '1/5': "20%"

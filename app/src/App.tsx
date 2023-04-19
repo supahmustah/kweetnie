@@ -28,49 +28,49 @@ function App() {
           <li></li>
         </ul>
       </div>
-      <header className='pt-1/8 h-screen text-center'>
+      <header className='md:pt-1/8 pt-2/3 h-screen text-center'>
         <div className='mb-5 text-white'>
-          <p className='font-semibold animate-moveTextDown textShadow text-2xl lg:text-5xl'>
+          <p className='font-semibold animate-moveTextDown textShadow text-2xl md:text-5xl'>
             Lode Van Beneden
           </p>
           <div
-            className={`bg-white relative animate-expandLine left-1/2 -translate-x-1/2 opacity-0 my-3 p-[1.5px] lg:my-5 `}
+            className={`bg-white relative animate-expandLineSmall md:animate-expandLine left-1/2 -translate-x-1/2 opacity-0 my-3 p-[1.5px] md:my-5 `}
             id='movingLine'></div>
           <p
-            className={`animate-moveTextUp mx-2 opacity-0 text-lg lg:text-2xl`}>
+            className={`animate-moveTextUp mx-6 opacity-0 text-md md:text-2xl`}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </p>
         </div>
         <div className={`flex gap-4 justify-center`}>
           <a
-            className='bg-white p-5 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#0A66C2] hover:text-white animate-showSocial group'
+            className='bg-white md:p-5 p-3 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#0A66C2] hover:text-white animate-showSocial group'
             target='_blank'
             href='https://www.linkedin.com/in/lodevanbeneden/'>
             <FaLinkedinIn
-              className={`w-10 h-10 group-hover:animate-rotateLogo`}
+              className={`md:w-10 md:h-10 w-6 h-6 group-hover:animate-rotateLogo`}
             />
           </a>
           <a
-            className='bg-white p-5 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#EA3B52] hover:text-white animate-showSocial group'
+            className='bg-white md:p-5 p-3 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#EA3B52] hover:text-white animate-showSocial group'
             target='_blank'
             href='https://www.instagram.com/lodevb_/'>
             <FaInstagram
-              className={`w-10 h-10 group-hover:animate-rotateLogo`}
+              className={`md:w-10 md:h-10 w-6 h-6 group-hover:animate-rotateLogo`}
             />
           </a>
           <a
-            className='bg-white p-5 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#1479BD] hover:text-white animate-showSocial group'
+            className='bg-white md:p-5 p-3 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#1479BD] hover:text-white animate-showSocial group'
             target='_blank'
             href='https://www.facebook.com/Lodeehhh'>
             <FaFacebookF
-              className={`w-10 h-10 group-hover:animate-rotateLogo`}
+              className={`md:w-10 md:h-10 w-6 h-6 group-hover:animate-rotateLogo`}
             />
           </a>
         </div>
         <div className='flex justify-center animate-showSocial opacity-0 transition-all duration-500 cursor-pointer'>
           <div
-            className='rounded-full border-2 bg-white border-bgWhite transition-all duration-500 py-3 w-52 text-center mt-16 animate-showPulse'
+            className='rounded-full border-2 bg-white border-bgWhite transition-all duration-500 md:py-3 py-2 w-36 md:w-52 text-center md:mt-16 mt-8 animate-showPulse text-sm md:text-base'
             onClick={() => showSkills()}>
             <p className='font-semibold'>Click to see more</p>
           </div>
