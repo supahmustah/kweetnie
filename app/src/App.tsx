@@ -46,6 +46,7 @@ function App() {
           <a
             className='bg-white md:p-5 p-3 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#0A66C2] hover:text-white animate-showSocial group'
             target='_blank'
+            rel='noreferrer'
             href='https://www.linkedin.com/in/lodevanbeneden/'>
             <FaLinkedinIn
               className={`md:w-10 md:h-10 w-6 h-6 group-hover:animate-rotateLogo`}
@@ -54,6 +55,7 @@ function App() {
           <a
             className='bg-white md:p-5 p-3 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#EA3B52] hover:text-white animate-showSocial group'
             target='_blank'
+            rel='noreferrer'
             href='https://www.instagram.com/lodevb_/'>
             <FaInstagram
               className={`md:w-10 md:h-10 w-6 h-6 group-hover:animate-rotateLogo`}
@@ -62,6 +64,7 @@ function App() {
           <a
             className='bg-white md:p-5 p-3 drop-shadow-2xl rounded-full opacity-0 transition-all duration-500 hover:bg-[#1479BD] hover:text-white animate-showSocial group'
             target='_blank'
+            rel='noreferrer'
             href='https://www.facebook.com/Lodeehhh'>
             <FaFacebookF
               className={`md:w-10 md:h-10 w-6 h-6 group-hover:animate-rotateLogo`}

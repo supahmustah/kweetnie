@@ -11,7 +11,10 @@ export default function StarContainer(props: any) {
     for (let i: number = 0; i < 5; i++) {
       if (i < splitKnowledge[0]) {
         stars.push(BsStarFill);
-      } else if (i == splitKnowledge[0] && splitKnowledge[1] == 5) {
+      } else if (
+        i.toString() === splitKnowledge[0] &&
+        splitKnowledge[1] === '5'
+      ) {
         stars.push(BsStarHalf);
       } else {
         stars.push(BsStar);
@@ -25,7 +28,9 @@ export default function StarContainer(props: any) {
     <div className='flex flex-row justify-center space-x-[1px] mb-2 text-gray-400 text-sm'>
       {stars.map((star, index) => (
         <div key={index}>
-          {createElement(star, { className: 'h-4 w-4 text-yellow-500' })}
+          {createElement(star, {
+            className: 'h-4 w-4 text-yellow-500',
+          })}
         </div>
       ))}
     </div>
