@@ -91,11 +91,11 @@ function App() {
         </svg>
       </div>
       <SwiperContainer />
-      <div className='relative flex justify-center bg-bgWhite'>
+      {/* <div className='relative flex justify-center bg-bgWhite'>
         <div className='rounded-full border-2 bg-white border-textAccent py-3 w-52 text-center my-16 cursor-pointer'>
           <p className='font-semibold text-textAccent'>Contact me!</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

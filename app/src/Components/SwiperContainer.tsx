@@ -47,7 +47,7 @@ export default function SwiperContainer() {
                 <StarContainer knowledge={skill.knowledge} />
               </div>
               <div className='sm:border-t-2'></div>
-              <div className='italic mt-3 hidden sm:visible'>
+              <div className='italic mt-3'>
                 <p>{skill.desc}</p>
               </div>
             </div>
