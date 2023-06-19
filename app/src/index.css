@@ -168,30 +168,10 @@
   position: relative;
   display: block;
   width: calc(188% + 1.3px);
-  height: 150px;
+  height: 200px;
 }
 
 .custom-shape-divider-bottom-1676931458 .shape-fill {
-  fill: #f5f5ff;
-}
-
-.custom-shape-divider-top-1677783687 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1677783687 svg {
-  position: relative;
-  display: block;
-  width: calc(188% + 1.3px);
-  height: 150px;
-}
-
-.custom-shape-divider-top-1677783687 .shape-fill {
   fill: #f5f5ff;
 }
 
