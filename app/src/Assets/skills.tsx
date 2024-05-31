@@ -2,6 +2,7 @@ import * as SimpleIcons from 'react-icons/si';
 import * as Devicons from 'react-icons/di';
 import { TbBrandCSharp, TbBrandCss3, TbBrandHtml5 } from 'react-icons/tb';
 import { GrMysql } from 'react-icons/gr';
+import { FaJava, FaAndroid } from 'react-icons/fa';
 
 const skills = [
   {
@@ -66,6 +67,27 @@ const skills = [
     color: 'bg-[#38BDF8]',
     knowledge: 4.5,
     desc: `Tailwind is a utility-first CSS framework for rapidly building custom user interfaces.`,
+  },
+  {
+    title: 'Java',
+    icon: <FaJava />,
+    color: 'bg-[#0074BD]',
+    knowledge: 4,
+    desc: `Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.`,
+  },
+  {
+    title: 'Kotlin',
+    icon: <SimpleIcons.SiKotlin />,
+    color: 'bg-[#7F52FF]',
+    knowledge: 4,
+    desc: `Kotlin is a cross-platform, statically typed, general-purpose high-level programming language with type inference.`,
+  },
+  {
+    title: 'SpringBoot',
+    icon: <SimpleIcons.SiSpringboot />,
+    color: 'bg-[#69AD3C]',
+    knowledge: 3.5,
+    desc: `Spring Boot is an open-source Java framework used for programming standalone, production-grade Spring-based applications with minimal effort.`,
   },
 ];
 export default skills;
