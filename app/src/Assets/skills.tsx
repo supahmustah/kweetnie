@@ -2,7 +2,7 @@ import * as SimpleIcons from 'react-icons/si';
 import * as Devicons from 'react-icons/di';
 import { TbBrandCSharp, TbBrandCss3, TbBrandHtml5 } from 'react-icons/tb';
 import { GrMysql } from 'react-icons/gr';
-import { FaJava, FaAndroid } from 'react-icons/fa';
+import { FaJava } from 'react-icons/fa';
 
 const skills = [
   {
